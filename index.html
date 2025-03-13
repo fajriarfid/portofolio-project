@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Game Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About Me</a></li>
+        </ul>
+      </nav>
+      <div class="auth-links">
+        <a href="#signup">Sign Up</a>
+        <a href="#login">Login</a>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>PLAY TRADITIONAL GAME</h1>
+        <p>Experience New Traditional Gameplay</p>
+        <button class="orange-button" onclick="playNow()">Play Now</button>
+      </div>
+    </section>
+
+    <section class="games" id="work">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>What's so special?</h2>
+        <h1>THE GAMES</h1>
+      </div>
+      <div class="carousel">
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <img
+          id="carouselImage"
+          src="images/rockpaperstrategy-1600.jpg"
+          alt="Game Image"
+        />
+        <button class="next" onclick="nextSlide()">❯</button>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="overlay"></div>
+      <div class="feature-container">
+        <div class="features-content">
+          <h2>What's so special?</h2>
+          <h1>FEATURES</h1>
+
+          <div class="feature-item">
+            <div class="feature-markers">
+              <div class="feature-marker active"></div>
+              <div class="feature-line"></div>
+            </div>
+            <div class="feature-info">
+              <h3>TRADITIONAL GAMES</h3>
+              <p>
+                If you miss your childhood, we provide many traditional games
+                here.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-markers">
+              <div class="feature-marker inactive"></div>
+              <div class="feature-line"></div>
+            </div>
+            <div class="feature-info">
+              <h3>GAME SUIT</h3>
+              <p>
+                Play the classic rock-paper-scissors game with new exciting
+                twists!
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-markers">
+              <div class="feature-marker inactive"></div>
+            </div>
+            <div class="feature-info">
+              <h3>TBD</h3>
+              <p>More exciting features coming soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-requirements" id="about">
+      <div class="overlay"></div>
+      <div class="system-content">
+        <h1>SYSTEM<br />REQUIREMENTS</h1>
+        <p>Can My Computer Run this game?</p>
+
+        <div class="requirements-grid">
+          <div class="requirement-box">
+            <h3>OS:</h3>
+            <p>Windows 7 64-bit only<br />(No OSX support at this time)</p>
+          </div>
+
+          <div class="requirement-box">
+            <h3>PROCESSOR:</h3>
+            <p>Intel Core 2 Duo @ 2.4GHz or<br />AMD Athlon X2 @ 2.8GHz</p>
+          </div>
+
+          <div class="requirement-box">
+            <h3>MEMORY:</h3>
+            <p>4 GB RAM</p>
+          </div>
+
+          <div class="requirement-box">
+            <h3>STORAGE:</h3>
+            <p>8 GB available space</p>
+          </div>
+
+          <div class="requirement-box" style="grid-column: span 2">
+            <h3>GRAPHICS:</h3>
+            <p>
+              NVIDIA GeForce GTX 660 2GB or<br />AMD Radeon HD 7850 2GB
+              DirectX11 (Shader Model 5)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function playNow() {
+        alert("Starting the game...");
+      }
+
+      // Image carousel functionality
+      const images = [
+        "images/rockpaperstrategy-1600.jpg",
+        "images/game-image2.jpg",
+        "images/game-image3.jpg",
+      ];
+
+      let currentSlide = 0;
+      const carouselImage = document.getElementById("carouselImage");
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % images.length;
+        carouselImage.src = images[currentSlide];
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + images.length) % images.length;
+        carouselImage.src = images[currentSlide];
+      }
+    </script>
+  </body>
+</html>

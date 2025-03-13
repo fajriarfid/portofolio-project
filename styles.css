@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: url("images/main-bg.jpg") no-repeat center center/cover;
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.auth-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero {
+  background: url("images/main-bg.jpg") no-repeat center center/cover;
+}
+
+.hero .content {
+  text-align: center; /* Center hero content */
+  max-width: 600px;
+  padding: 0;
+}
+
+.hero .content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Keep the text on one line */
+}
+
+.hero .content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.games {
+  background: url("images/the-games-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding-left: 50px;
+  max-width: 50%;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 45%; /* Reduced from 50% to prevent images from being cut off */
+  margin-right: 5%; /* Added margin to prevent images from being too close to the edge */
+}
+
+.carousel img {
+  width: 100%; /* Changed from fixed 800px to fit container */
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px 10px;
+  z-index: 3;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.feature-section {
+  position: relative;
+  height: 100vh;
+  background: url("images/karakter.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.feature-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.character-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.character-img {
+  max-height: 80vh;
+  width: auto;
+}
+
+.features-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-left: 20%; /* Increased from 10% to shift content more to the right */
+  padding-right: 10%;
+  max-width: 600px;
+  margin: 0 auto 0 auto; /* Center the content but push more to the right */
+}
+
+.features-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.features-content h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.feature-marker {
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.feature-marker.active {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.feature-marker.inactive {
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.feature-line {
+  width: 2px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0 5px 9px;
+}
+
+.feature-info h3 {
+  color: #ffb320;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.feature-info p {
+  color: #ccc;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.orange-button {
+  background-color: #ffb320;
+  border: none;
+  color: white;
+}
+
+.orange-button:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* System Requirements Section */
+.system-requirements {
+  background: url("images/requirements.png") no-repeat center center/cover;
+  position: relative;
+}
+
+.system-content {
+  max-width: 600px;
+  text-align: left;
+  padding: 0 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.system-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.system-content p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 30px;
+}
+
+.requirement-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.requirement-box h3 {
+  color: #ffb320;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.requirement-box p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 0;
+}
